@@ -3,7 +3,7 @@
 var results;
 
 async function searchVA(){
-
+    hideResults();
 
     const userInput = document.getElementById('userInput').value; //get user input
     console.log(userInput);
@@ -25,8 +25,22 @@ async function searchVA(){
        </table>`;
 
         document.querySelector('.container').insertAdjacentHTML('beforeend', markup);
-        document.getElementsByTagName('table').style.border = 'solid red';
     } 
+  
+}
+
+
+function hideResults(){
+    try{
+        const results = document.querySelectorAll('.results');
+        for (i = 0; i < results.length; i++){
+            results[i].style.display = 'none';
+        }
+    }
+    catch{
+        console.log('no results found');
+    }
+    
 }
 
 
