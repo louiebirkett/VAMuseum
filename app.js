@@ -1,10 +1,10 @@
 // API stuff
 
-
-
-
+var results;
 
 async function searchVA(){
+
+
     const userInput = document.getElementById('userInput').value; //get user input
     console.log(userInput);
 
@@ -16,20 +16,19 @@ async function searchVA(){
         const title = data.records[i]._primaryTitle;
         const thumbnail = data.records[i]._images._primary_thumbnail;
 
-        const markup = `<div id="results"><h1>${title}</h2> <img src='${thumbnail}'></div>`;
-        document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
+           const markup = `
+           <table class="results">
+           <tr>
+           <td class="image"><img class="thumbnail" src="${thumbnail}" alt=""></td>
+               <td class="title">${title}</td>
+           </tr>
+       </table>`;
 
+        document.querySelector('.container').insertAdjacentHTML('beforeend', markup);
+        document.getElementsByTagName('table').style.border = 'solid red';
     } 
-    console.log(data);
-
-    
-    // data.records.forEach(element => {
-    //     const markup = `<li>${data.records._primaryTitle}</li>`;
-    //     document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
-        
-    // });
-
 }
+
 
 
 
