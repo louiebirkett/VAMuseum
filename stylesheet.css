@@ -1,12 +1,11 @@
-body{
-    margin: 0;
+@font-face {
+    font-family: "Inter";
+    src: url('https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2');
 }
 
-
 body{
-    margin: 0;
+    font-family: "Inter", sans-serif;
 }
-
 .searchBar{
     /* border: solid red; */
     width: fit-content;
@@ -16,7 +15,19 @@ body{
     margin: auto;
     margin-top: 100px;
     margin-bottom: 0;
-    
+}
+#userInput{
+    width: 30em;
+    height: 2em;
+    box-shadow: 0px 5px 13px -10px #141414;
+}
+#userInput:placeholder{
+    padding-left: 10px;
+}
+.searchBar button{
+    width: 5em;
+    height: 2.5em;
+    box-shadow: 0px 5px 13px -10px #141414; 
 }
 
 .container{
@@ -25,7 +36,9 @@ body{
     overflow: scroll;
     margin: 10%;
     margin-top: 0;
-    border: solid black;
+    border: solid black 2px ;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 13px -2px #141414;;
 }
 
 .results{
@@ -33,6 +46,9 @@ body{
     height: 200px;
     width: 100%;
     border: solid black 1px;
+}
+h1{
+    text-align: center;
 }
 
 .image{
@@ -42,8 +58,25 @@ body{
     /* border: solid red 1px; */
 }
 
-
+.title{
+    font-size: 1.15em;
+}
 td{
     padding: 10px;
+}
+
+
+@media (max-width: 515px){
+    body{
+        background-color: red;
+    }
+    .searchBar{
+        display: flex;
+    }
+    #userInput{
+        margin: 0;
+        padding: 0;
+        width: 75vw;
+    }
 }
 
