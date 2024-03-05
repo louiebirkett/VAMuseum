@@ -57,6 +57,11 @@ h1{
     padding-right: 50px;
     /* border: solid red 1px; */
 }
+.noThumbnail{
+    text-align: center;
+    width: 100px;
+    padding-right: 50px;
+}
 
 .title{
     font-size: 1.15em;
@@ -67,16 +72,20 @@ td{
 
 
 @media (max-width: 515px){
-    body{
-        background-color: red;
-    }
     .searchBar{
         display: flex;
+        flex-direction: column;
     }
     #userInput{
         margin: 0;
         padding: 0;
         width: 75vw;
+    }
+
+    button{
+        margin: auto;
+        margin-top: 1em;
+        
     }
 }
 
