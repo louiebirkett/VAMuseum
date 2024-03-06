@@ -1,5 +1,7 @@
 // API stuff
-var results;
+let results;
+
+
 
 async function searchVA() {
     hideResults();
