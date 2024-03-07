@@ -7,7 +7,7 @@ body{
     background-image: url('images/backgroundimg.jpeg');
     background-size: cover;
     font-family: "Inter", sans-serif;
-    overflow: none;
+    overflow: hidden;
     background-attachment: fixed;
     background-position: center;
 
@@ -22,12 +22,15 @@ body{
     margin-top: 100px;
     margin-bottom: 0;
 }
+label{
+    display: none;
+}
 #userInput{
     width: 30em;
     height: 2em;
     box-shadow: 0px 5px 13px -10px #141414;
 }
-#userInput:placeholder{
+#userInput::placeholder{
     padding-left: 10px;
 }
 .searchBar button{
@@ -152,10 +155,12 @@ tr{
 
 
 footer{
+    background-color: #000000;
     color: white;
     position: sticky;
     display: inline ;
     bottom: 0;
+    padding: 5px;
 }
 
 @media (max-width: 515px){
