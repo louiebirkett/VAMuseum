@@ -22,8 +22,9 @@ body{
     margin-top: 100px;
     margin-bottom: 0;
 }
-.labelText{
-    display: none;
+label{
+    position: absolute;
+    visibility: hidden;
 }
 #userInput{
     width: 30em;
