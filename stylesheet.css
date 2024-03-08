@@ -22,9 +22,7 @@ body{
     margin-top: 100px;
     margin-bottom: 0;
 }
-label{
-    display: none;
-}
+
 #userInput{
     width: 30em;
     height: 2em;
